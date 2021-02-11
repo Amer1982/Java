@@ -42,7 +42,7 @@ public class PersonDao {
         
         List<Person> personList = new ArrayList<>();
         try (Connection connection = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             Statement statement = (Statement) connection.createStatement();) {
+             Statement statement = (Statement) connection.createStatement()) {
              ResultSet resultSet = statement.executeQuery("SELECT * FROM person.person");
 
             while (resultSet.next()) {
