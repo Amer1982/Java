@@ -14,8 +14,8 @@ import java.util.List;
 public class PersonDao {
 
     static final String URL = "jdbc:mysql://localhost:3306/person?useSSL=false";
-    static final String USERNAME = "root";
-    static final String PASSWORD = "Password";
+    static final String USERNAME = "*****";
+    static final String PASSWORD = "********";
 
 
     //CREATE
