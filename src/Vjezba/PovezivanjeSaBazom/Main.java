@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         PersonDao personDao = new PersonDao();
-        //personDao.retreiveAll();
         List<Person> personList = personDao.retreiveAll();
         printPersons(personList);
 
