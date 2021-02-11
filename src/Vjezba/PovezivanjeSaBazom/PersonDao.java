@@ -39,8 +39,7 @@ public class PersonDao {
     }
 
     public List<Person> retreiveAll() {
-        //dohvatiti zapise iz tabele
-        //SELECT * FROM Person -> RDBMS -> RESULT SET
+        
         List<Person> personList = new ArrayList<>();
         try (Connection connection = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
              Statement statement = (Statement) connection.createStatement();) {
