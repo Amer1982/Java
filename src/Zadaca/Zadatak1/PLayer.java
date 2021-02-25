@@ -1,6 +1,6 @@
 package Zadaca.Zadatak1;
 
-public class PLayer implements Comparable<PLayer> {
+public class PLayer {
 
     private int id;
     private String name;
@@ -10,7 +10,7 @@ public class PLayer implements Comparable<PLayer> {
 
     }
 
-    public PLayer(int id, String name, int score) {
+    public PLayer(String name, int score) {
         this.id = id;
         this.name = name;
         this.score = score;
@@ -52,8 +52,8 @@ public class PLayer implements Comparable<PLayer> {
                 '}';
     }
 
-    @Override
-    public int compareTo(PLayer pLayer) {
-        return 0;
-    }
+    /*@Override
+    public int compareTo(PLayer o) {
+        return name.compareTo(o.getName());
+    }*/
 }

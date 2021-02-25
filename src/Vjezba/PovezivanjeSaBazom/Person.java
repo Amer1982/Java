@@ -1,8 +1,11 @@
 package Vjezba.PovezivanjeSaBazom;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Person implements Comparable<Person> {
+
+
     private int id;
     private String name;
     private String surname;
@@ -20,6 +23,7 @@ public class Person implements Comparable<Person> {
         this.surname = surname;
         this.birthday = birthday;
     }
+
 
     public int getId() {
         return id;
@@ -63,6 +67,13 @@ public class Person implements Comparable<Person> {
         this.gender = gender;
     }
 
+    public int getAge(){
+        LocalDate now=LocalDate.now();
+        Period period = birthday.until(now);
+        int years=period.getYears();
+        return years;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -71,6 +82,7 @@ public class Person implements Comparable<Person> {
                 ", surname='" + surname + '\'' +
                 ", birthday=" + birthday +
                 ", gender=" + gender +
+                ", age=" + getAge()+
                 '}';
     }
 

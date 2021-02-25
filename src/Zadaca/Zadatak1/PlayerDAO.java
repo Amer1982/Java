@@ -4,17 +4,17 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBConnection {
+public class PlayerDAO {
 
 
     static final String URL = "jdbc:mysql://localhost:3306/my_first_db?useSSL=false";
     static final String USERNAME = "root";
     static final String PASSWORD = "Password";
 
-    public static PLayer insert (PLayer pLayer) {
+    public static PLayer insert(PLayer pLayer) {
         try (Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              PreparedStatement prst = conn.prepareStatement
-                     ("INSERT INTO hiscore(name,score) VALUES(?,?)")) {
+                     ("INSERT INTO hiscores(name,score) VALUES(?,?)")) {
 
 
             //prst.setInt(1, pLayer.getId());
@@ -23,8 +23,6 @@ public class DBConnection {
             int a = prst.executeUpdate();
             if (a > 0) {
                 System.out.println("Unos uspjesan");
-                List<PLayer> pLayerList = DBConnection.retreiveAll();
-                printTable(pLayerList);
             }
 
         } catch (SQLException s) {
@@ -36,9 +34,9 @@ public class DBConnection {
     public static List<PLayer> retreiveAll() {
 
         List<PLayer> pLayerList = new ArrayList<>();
-        try (com.mysql.jdbc.Connection connection = (com.mysql.jdbc.Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
-             com.mysql.jdbc.Statement statement = (com.mysql.jdbc.Statement) connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM hiscore");
+        try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+             Statement statement = connection.createStatement()) {
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM hiscores");
 
             while (resultSet.next()) {
                 PLayer pLayer = new PLayer();
@@ -53,15 +51,11 @@ public class DBConnection {
             System.err.println(s.getMessage());
         }
         return pLayerList;
-    }
-    static void printTable(List<PLayer> pLayerList) {
-        for (PLayer pLayer:pLayerList) {
-            System.out.println(pLayer);
-        }
+
     }
 }
 
-       /* ResultSet tabela = st.executeQuery("SELECT * FROM hiscores");
+/* ResultSet tabela = st.executeQuery("SELECT * FROM hiscores");
         if (tabela.next()) {
         System.out.println("player name\tscore");
         System.out.println(tabela.getString("name") + "\t     " + tabela.getString("score"));*/

@@ -2,7 +2,6 @@ package JavaCore.Predavanje5.Zadaca;
 //Izračunati minimum od tri broja upotrebom naredbe if-else.
 
 import java.util.Scanner;
-
 public class MinIfElse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
