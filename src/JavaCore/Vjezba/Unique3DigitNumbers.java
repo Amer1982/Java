@@ -1,6 +1,10 @@
 package JavaCore.Vjezba;
 
-public class Main {
+/*
+Write a Java program to create and display unique three-digit number using 1, 2, 3, 4.
+Also count how many three-digit numbers are there.
+ */
+public class Unique3DigitNumbers {
     public static void main(String[] args) {
         int amount = 0;
         for(int i = 1; i <= 4; i++){
