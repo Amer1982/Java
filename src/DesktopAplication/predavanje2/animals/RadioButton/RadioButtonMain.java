@@ -1,4 +1,4 @@
-package DesktopAplication.predavanje2.animals;
+package DesktopAplication.predavanje2.animals.RadioButton;
 
 import javax.swing.*;
 

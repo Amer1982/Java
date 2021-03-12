@@ -1,5 +1,6 @@
-package DesktopAplication.predavanje2.animals;
+package DesktopAplication.predavanje2.animals.RadioButton;
 
+import DesktopAplication.predavanje2.animals.AnimalEnum;
 import DesktopAplication.predavanje2.common.ImageIconLoader;
 
 import javax.swing.*;
@@ -59,8 +60,9 @@ public class AnimalPanel extends JPanel {
             pictureLabel.setIcon(imageIcon);
         }
     }*/
-    //Ovo je drugi nacin
 
+
+    //Ovo je drugi nacin
     public void onRadioButtonClick(ActionEvent actionEvent) {
         String pictureName = actionEvent.getActionCommand();
         ImageIconLoader imageIconLoader = new ImageIconLoader(AnimalPanel.class);
