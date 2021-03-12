@@ -1,5 +1,6 @@
 package DesktopAplication.predavanje2.animals;
 
+import DesktopAplication.predavanje2.animals.RadioButton.AnimalPanel;
 import DesktopAplication.predavanje2.common.ImageIconLoader;
 
 import javax.swing.*;
