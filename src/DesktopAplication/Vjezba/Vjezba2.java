@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Scanner;
 
+/**
+ * Kreirajte program koji će od korisnika (putem konzole) preuzeti podatke o naslovu prozora ,
+ * veličini i poziciji prozora i prikazati ga na ekranu
+ */
+
 public class Vjezba2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

@@ -3,6 +3,10 @@ package DesktopAplication.Vjezba;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Potrebno je kreirati prozor koji će biti kombinacija box layout-a i
+ * border layout-a
+ */
 public class Vježba3 {
     public static void main(String[] args) {
         JFrame frame=new JFrame();
