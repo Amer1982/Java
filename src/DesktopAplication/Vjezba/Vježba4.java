@@ -12,6 +12,7 @@ restart igre i izlazak iz programa
 public class Vježba4 {
 
     public static void main(String[] args) {
+
         new Vježba4();
     }
 

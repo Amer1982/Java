@@ -1,7 +1,6 @@
 package DesktopAplication.predavanje2.animals.ComboBox;
 
 import DesktopAplication.predavanje2.animals.AnimalEnum;
-import DesktopAplication.predavanje2.animals.RadioButton.AnimalPanel;
 import DesktopAplication.predavanje2.common.ImageIconLoader;
 
 import javax.swing.*;
@@ -51,7 +50,7 @@ public class ComboBoxPanel extends JPanel {
     }
 
     private void updatePicture() {
-        ImageIconLoader imageIconLoader = new ImageIconLoader(AnimalPanel.class);
+        ImageIconLoader imageIconLoader = new ImageIconLoader(AnimalEnum.class);
         String animalName = (String) animalComboBox.getSelectedItem();
         String pictureName = animalName + ".gif";
         ImageIcon imageIcon = imageIconLoader.load(pictureName);

@@ -1,11 +1,11 @@
-package JavaCore.Vjezba;
+package Vjezba;
 
 import javax.swing.*;
 
 public class GuessingGame {
     public static void main(String[] args) {
 
-        int randomNumber = (int) (Math.random() * 100 + 1);
+        int randomNumber = (int) (Math.random() * 100);
         int userAnswer = 0;
         System.out.println("The correct guess would be " + randomNumber);
         int count = 1;
