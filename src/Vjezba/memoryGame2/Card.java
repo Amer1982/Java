@@ -11,16 +11,18 @@ public class Card extends JLabel implements MouseListener {
     int num;
     int iconWidthHalf, iconHeightHalf;
     boolean mousePressedOnMe = false;
+    private cardController controller;
 
-    public Card(Icon face, Icon back, int num) {
+    public Card(cardController controller, Icon face, Icon back, int num) {
         super(back);
         this.faceIcon = face;
         this.backIcon = back;
         this.num = num;
-//za pracenje klika misem
-        this.addMouseListener((MouseListener) this);
+        //for mouse control
+        this.addMouseListener(this);
         this.iconHeightHalf = back.getIconHeight() / 2;
         this.iconWidthHalf = face.getIconWidth() / 2;
+        this.controller = controller;
     }
 
     public int getNum() {
@@ -38,12 +40,14 @@ public class Card extends JLabel implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if (overIcon(mouseEvent.getX(), mouseEvent.getY())) this.turnUp();
+        if (overIcon(mouseEvent.getX(), mouseEvent.getY()))
+            this.turnUp();
     }
 
     public void turnUp() {
         if (this.faceUp) return;
         this.faceUp=true;
+        this.faceUp=this.controller.turnUp(this);
         if (this.faceUp) this.setIcon(this.faceIcon);
     }
 
