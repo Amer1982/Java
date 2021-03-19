@@ -13,7 +13,7 @@ public class memoryGame implements ActionListener {
 
     public memoryGame() {
         //main window
-        this.mainFrame = new JFrame("Memory Game");
+        this.mainFrame = new JFrame("Memory Game by Amer");
         this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.mainFrame.setSize(700, 700);
         this.mainContentPane = this.mainFrame.getContentPane();
