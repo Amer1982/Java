@@ -1,4 +1,4 @@
-package Vjezba.memoryGame2;
+package Vjezba.memoryGame;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package Vjezba.memoryGame2;
+package Vjezba.memoryGame;
 
 public class MemoryMain {
     public static void main(String[] args) {
