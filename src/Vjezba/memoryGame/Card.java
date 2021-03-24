@@ -11,7 +11,7 @@ public class Card extends JLabel implements MouseListener {
     int num;
     int iconWidthHalf, iconHeightHalf;
     boolean mousePressedOnMe = false;
-    private cardController controller;
+    private final cardController controller;
 
     public Card(cardController controller, Icon face, Icon back, int num) {
         super(back);

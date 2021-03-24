@@ -7,11 +7,11 @@ import java.util.Vector;
 
 public class cardController implements ActionListener {
 
-    private Vector turnedCards;
-    private Timer turnDownTimer;
+    private final Vector<Card> turnedCards;
+    private final Timer turnDownTimer;
 
     public cardController() {
-        this.turnedCards = new Vector(2);
+        this.turnedCards = new Vector<Card>(2);
         int turnDownDelay = 2000;
         this.turnDownTimer = new Timer(turnDownDelay, this);
         this.turnDownTimer.setRepeats(false);
@@ -27,7 +27,7 @@ public class cardController implements ActionListener {
     private boolean addCard(Card card) {
         this.turnedCards.add(card);
         if (this.turnedCards.size() == 2) {
-            Card otherCard = (Card) this.turnedCards.get(0);
+            Card otherCard = this.turnedCards.get(0);
             if (otherCard.getNum() == card.getNum())
                 this.turnedCards.clear();
             else this.turnDownTimer.start();

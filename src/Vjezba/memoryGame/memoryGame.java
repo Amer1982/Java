@@ -7,9 +7,9 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class memoryGame implements ActionListener {
-    private JFrame mainFrame;
-    private Container mainContentPane;
-    private ImageIcon[] cardIcon;
+    private final JFrame mainFrame;
+    private final Container mainContentPane;
+    private final ImageIcon[] cardIcon;
 
     public memoryGame() {
         //main window
@@ -39,7 +39,7 @@ public class memoryGame implements ActionListener {
     private ImageIcon[] loadCardIcon() {
         ImageIcon[] icon = new ImageIcon[9];
         for (int i = 0; i < 9; i++) {
-            String fileName = "src/Vjezba/memoryGame2/Prva igra/Card" + i + ".jpg";
+            String fileName = "src/Vjezba/memoryGame/Prva igra/Card" + i + ".jpg";
             icon[i] = new ImageIcon(fileName);
         }
         return icon;
@@ -48,6 +48,7 @@ public class memoryGame implements ActionListener {
     public JPanel makeCards() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4,4,2,2));
+
         
         //For the back of the card I choose card no 9 with index No 8
         ImageIcon backIcon = this.cardIcon[8];
@@ -69,13 +70,15 @@ public class memoryGame implements ActionListener {
         return panel;
     }
 
-    private void randomizeCardArray(int[] t) {
+    private void randomizeCardArray(int[] a) {
         Random random = new Random();
-        for (int i = 0; i < t.length; i++) {
-            int d = random.nextInt(t.length);
-            int s = t[d];
-            t[d] = t[i];
-            t[i] = s;
+        for (int i = 0; i < a.length; i++) {
+            int x = random.nextInt(a.length);
+            //To mix cards
+            int y = a[x];
+            a[x] = a[i];
+            a[i] = y;
+
         }
     }
 
