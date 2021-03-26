@@ -15,7 +15,7 @@ public class memoryGame implements ActionListener {
         //main window
         this.mainFrame = new JFrame("Memory Game by Amer");
         this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.mainFrame.setSize(800,800);
+        this.mainFrame.setSize(850,800);
         this.mainContentPane = this.mainFrame.getContentPane();
         this.mainContentPane.setLayout(new BoxLayout(this.mainContentPane, BoxLayout.PAGE_AXIS));
 
@@ -50,7 +50,7 @@ public class memoryGame implements ActionListener {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4,4,2,2));
         // Had to add ScrollPane because cards weren't showing correctly
-        JScrollPane scrollPane=new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        JScrollPane scrollPane=new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         
         //For the back of the card I choose card no 9 with index No 8
