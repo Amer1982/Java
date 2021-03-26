@@ -46,9 +46,11 @@ public class memoryGame implements ActionListener {
         return icon;
     }
     //panel for the cards
-    public JPanel makeCards() {
+    public JScrollPane makeCards() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4,4,2,2));
+        // Had to add ScrollPane because cards aren't showing correctly
+        JScrollPane scrollPane=new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         
         //For the back of the card I choose card no 9 with index No 8
@@ -68,7 +70,7 @@ public class memoryGame implements ActionListener {
             Card newCard = new Card(controller, this.cardIcon[num], backIcon, num);
             panel.add(newCard);
         }
-        return panel;
+        return scrollPane;
     }
 
     private void randomizeCardArray(int[] a) {
