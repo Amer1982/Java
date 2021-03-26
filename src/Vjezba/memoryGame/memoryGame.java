@@ -49,7 +49,7 @@ public class memoryGame implements ActionListener {
     public JScrollPane makeCards() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(4,4,2,2));
-        // Had to add ScrollPane because cards aren't showing correctly
+        // Had to add ScrollPane because cards weren't showing correctly
         JScrollPane scrollPane=new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         
