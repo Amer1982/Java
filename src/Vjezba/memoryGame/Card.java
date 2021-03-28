@@ -5,11 +5,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class Card extends JLabel implements MouseListener {
-    Icon faceIcon;
-    Icon backIcon;
+    final Icon faceIcon;
+    final Icon backIcon;
     boolean faceUp = false;
-    int num;
-    int iconWidthHalf, iconHeightHalf;
+    final int num;
+    final int iconWidthHalf;
+    final int iconHeightHalf;
     boolean mousePressedOnMe = false;
     private final cardController controller;
 
@@ -32,9 +33,7 @@ public class Card extends JLabel implements MouseListener {
     private boolean overIcon(int x, int y) {
         int distX = Math.abs(x - (this.getWidth() / 2));
         int distY = Math.abs(y - (this.getHeight() / 2));
-        if (distX > this.iconHeightHalf || distY > this.iconWidthHalf)
-            return false;
-        return true;
+        return distX <= this.iconHeightHalf && distY <= this.iconWidthHalf;
     }
 
 

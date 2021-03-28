@@ -15,7 +15,8 @@ public class memoryGame implements ActionListener {
         //main window
         this.mainFrame = new JFrame("Memory Game by Amer");
         this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.mainFrame.setSize(850,800);
+        this.mainFrame.setSize(650,650);
+        this.mainFrame.setLocation(400,25);
         this.mainContentPane = this.mainFrame.getContentPane();
         this.mainContentPane.setLayout(new BoxLayout(this.mainContentPane, BoxLayout.PAGE_AXIS));
 
