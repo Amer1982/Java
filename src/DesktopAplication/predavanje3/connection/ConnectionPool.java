@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectionPool {
-    private final int NUMBER_OF_CONNECTIONS = 10;
 
-    private List<Connection> availableConnections = new ArrayList<>();
-    private List<Connection> unavailableConnections = new ArrayList<>();
+    private final List<Connection> availableConnections = new ArrayList<>();
+    private final List<Connection> unavailableConnections = new ArrayList<>();
 
     public ConnectionPool() throws SQLException{
+        int NUMBER_OF_CONNECTIONS = 10;
         for(int i = 0; i< NUMBER_OF_CONNECTIONS; i++){
             Connection connection = createConnection();
             availableConnections.add(connection);
@@ -20,8 +20,7 @@ public class ConnectionPool {
     }
 
     private Connection createConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection(ConnectionProperties.URL.getValue(), ConnectionProperties.USERNAME.getValue(), ConnectionProperties.PASSWORD.getValue());
-        return connection;
+        return DriverManager.getConnection(ConnectionProperties.URL.getValue(), ConnectionProperties.USERNAME.getValue(), ConnectionProperties.PASSWORD.getValue());
     }
 
     public Connection getConnection(){

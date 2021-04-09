@@ -15,13 +15,12 @@ import java.util.Vector;
 public class ShowPanel extends JPanel {
 
 
-    private JTable showTable;
-    private ShowDao showDao;
+    private final ShowDao showDao;
 
     public ShowPanel(ShowDao showDao) {
         this.showDao = showDao;
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        showTable = new JTable();
+        JTable showTable = new JTable();
         Vector<String> columnNames = createColumnNames();
         Vector<Vector<Object>> tableData = createTableData();
         ShowModel showModel = new ShowModel(columnNames, tableData);
@@ -30,12 +29,11 @@ public class ShowPanel extends JPanel {
     }
 
     private Vector<String> createColumnNames() {
-        Vector<String> columnNames = showDao.getColumnNames();
         /*columnNames.add("Show ID");
         columnNames.add("Title");
         columnNames.add("Number of seasons");
         columnNames.add("Year");*/
-        return columnNames;
+        return showDao.getColumnNames();
     }
 
     private Vector<Vector<Object>> createTableData() {
@@ -59,8 +57,8 @@ public class ShowPanel extends JPanel {
 
     private class ShowModel extends AbstractTableModel {
 
-        private Vector<String> columnNames;
-        private Vector<Vector<Object>> tableData;
+        private final Vector<String> columnNames;
+        private final Vector<Vector<Object>> tableData;
 
         public ShowModel(Vector<String> columnNames, Vector<Vector<Object>> tableData) {
             this.columnNames = columnNames;

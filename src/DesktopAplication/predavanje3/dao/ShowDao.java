@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Vector;
 
 public class ShowDao implements Dao<Show>{
-    private ConnectionPool connectionPool;
+    private final ConnectionPool connectionPool;
 
     public ShowDao(ConnectionPool connectionPool){
         this.connectionPool = connectionPool;

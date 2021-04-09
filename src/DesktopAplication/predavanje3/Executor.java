@@ -17,7 +17,7 @@ public class Executor {
     static void createGUI(){
         try {
             System.out.println(Thread.currentThread());
-            JFrame frame = new JFrame(" Shows from DATABASE");
+            JFrame frame = new JFrame(" Actors from DATABASE");
             frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             ConnectionPool connectionPool = new ConnectionPool();
             ShowDao showDao = new ShowDao(connectionPool);
