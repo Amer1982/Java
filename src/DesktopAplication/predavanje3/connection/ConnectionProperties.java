@@ -7,9 +7,9 @@ public enum ConnectionProperties {
     USERNAME("root"),
     PASSWORD("Password");
 
-    private String value;
+    private final String value;
 
-    private ConnectionProperties(String value){
+    ConnectionProperties(String value){
         this.value = value;
     }
 
