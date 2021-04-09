@@ -1,4 +1,4 @@
-package Vjezba;
+package Vjezba.GuessingGame;
 
 import javax.swing.*;
 
