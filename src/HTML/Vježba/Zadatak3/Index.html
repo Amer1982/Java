@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Potrebno je kreirati tri html fajla:
+Index.html
+Login.html
+Sendmail.html
+Treba kreirati formu da izgleda kao na slici
+Potrebno je validirati unos username-a I password-a (pomoć ćete dobiti u vidu javascript dijela koji ćete ubaciti u kod)
+Login button će voditi do login.html stranice, Forgot password link će voditi do sendmail.html stranice
+Reset button će resetovati sav unos u dva textbox-a
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<style>
+    fieldset{
+background-color: #5abfb7;
+width: 300px;
+text-align:center;
+margin:auto;
+    }
+</style>
+<body>
+<form name="login" method="post" action="Login.html"
+onsubmit="return check(form)">
+    <fieldset>
+<p>HTML Login page</p>
+        <label>Username:
+        <input type="text" name="Username" required>
+        </label><br><br>
+        <label>Password:
+            <input type="password" name="Password" required>
+        </label><br>
+<p>Forgot your password? Send us an <a href="SendMail.html">e-mail</a> </p>
+<input type="reset" name="Reset">
+<input type="submit" value="Login">
+    </fieldset>
+</form>
+
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "jamer1" && form.pwd.value == "password")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+</body>
+</html>

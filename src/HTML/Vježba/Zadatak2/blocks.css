@@ -1,0 +1,18 @@
+#link {
+    text-align:center;
+}
+#link a {
+    position:absolute;    background-color:blue;    left:45%;    top:0%; color:white;
+}
+#prvi {
+position:fixed; border:5px solid orange; margin:5px; padding:10px; width:250px; top:0; left:0;
+}
+#drugi {
+position:fixed; border:5px dashed blue; margin:5px; padding:10px; width:250px; top:0; right:0;
+}
+#treci {
+position:fixed; border:5px dashed green; margin:5px; padding:10px; width:250px; bottom:0; left:0;
+}
+#cetvrti {
+position:fixed; border:5px solid yellow; margin:5px; padding:10px; width:250px; bottom:0; right:0;
+}

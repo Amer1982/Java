@@ -1,0 +1,73 @@
+h1{
+color:rgb(175,50,175);}
+h2{
+color:#0000FF;}
+h3{
+}
+body{
+background: linear-gradient(to right,gray,blue);
+}
+#prvi{
+color:rgb(255, 0, 255, 0.5);
+}
+#iza{
+color:rgb(255, 0, 255);
+}
+#image{
+background-image: url("Logo.png");
+background-size: 300px 300px;
+}
+#repeatX{
+background-image: url("Logo.png");
+background-repeat:repeat-x;
+background-size: 300px 300px;
+}
+#repeatY{
+background-image: url("Logo.png");
+background-repeat:repeat-y;
+background-size: 300px 300px;
+}
+#noRepeat{
+background-image: url("Logo.png");
+background-repeat:no-repeat;
+background-size: 300px 300px;
+background-position: center;
+background-attachment: scroll;
+}
+#fixed{
+background: linear-gradient(to right,gray,blue);
+background-image: url("Logo.png");
+background-repeat:no-repeat;
+background-size: 300px 300px;
+background-position: 50% 50%;
+background-attachment: fixed;
+}
+#auto{
+background-image: url("Logo.png");
+background-size: auto;
+
+}
+#contain{
+background-image: url("Logo.png");
+background-size: contain;
+}
+#cover{
+background-image: url("Logo.png");
+background-size: cover;
+}
+
+p:first-letter{
+font-size: 150%;
+color: white;
+background-color:black;
+}
+h1 + p::first-letter {
+   color: white;
+   background-color: black;
+   border-radius: 2px;
+   box-shadow: 3px 3px 0 red;
+   font-size: 250%;
+   padding: 6px 3px;
+   margin-right: 6px;
+   float: left;
+ }

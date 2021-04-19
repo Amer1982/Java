@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Send mail je potrebno da sadrži formu za slanje mail-a na određenu mail adresu
+Link kojim se možemo vratiti na index.html stranicu
+
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Send Mail</title>
+</head>
+<style>
+    fieldset{
+background-color: #5abfb7;
+width: 300px;
+text-align:center;
+margin:auto;
+    }
+</style>
+<body>
+<h1 style="text-align:center;">Send e-mail to amer.jahj@gmail.com</h1>
+<fieldset>
+    <p>Enter your data</p>
+    <label>Name:
+        <input type="text" name="name">
+    </label><br><br>
+    <label>E-mail:
+        <input type="email" name="email">
+    </label><br><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+</fieldset>
+<p></p>
+<fieldset>
+    <p>Enter your message</p>
+    <label>Subject:
+        <input type="text" name="subject"></label><br>
+    <p>Your message:</p>
+    <textarea name="Your message:" cols="50" rows="7"></textarea><br>
+    <form action="mailto:amer.jahj@gmail.com" method="post">
+    <input type="submit" value="Send" >
+        <button onclick="location.href='Index.html'" type="button">
+            Back</button>
+    </form>
+</fieldset>
+</body>
+</html>
