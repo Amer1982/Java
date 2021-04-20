@@ -15,7 +15,7 @@ Reset button će resetovati sav unos u dva textbox-a
     <title>Index</title>
 </head>
 <style>
-    fieldset{
+    form{
 background-color: #5abfb7;
 width: 300px;
 text-align:center;
@@ -23,35 +23,34 @@ margin:auto;
     }
 </style>
 <body>
-<form name="login" method="post" action="Login.html"
-onsubmit="return check(form)">
+<form id="contactForm" action="Login.html" onSubmit="return validateForm()" method="post">
     <fieldset>
 <p>HTML Login page</p>
         <label>Username:
-        <input type="text" name="Username" required>
+        <input id="username" type="text" name="Username" required>
         </label><br><br>
         <label>Password:
-            <input type="password" name="Password" required>
+            <input id="password" type="password" name="Password" required>
         </label><br>
 <p>Forgot your password? Send us an <a href="SendMail.html">e-mail</a> </p>
+
 <input type="reset" name="Reset">
 <input type="submit" value="Login">
     </fieldset>
 </form>
 
-<script language="javascript">
-function check(form)
-{
-
-if(form.userid.value == "jamer1" && form.pwd.value == "password")
-{
-	return true;
-}
-else
-{
-	alert("Error Password or Username")
-	return false;
-}
+<script>
+function validateForm() {
+var un = document.querySelector('#username').value;
+  var pw = document.querySelector('#password').value;
+  var username = "jamer";
+  var password = "password";
+  if ((un == username) && (pw == password)) {
+    alert('You are successfully logged in');
+  } else {
+    alert("Login was unsuccessful, please check your username and password");
+    return false;
+  }
 }
 </script>
 </body>
