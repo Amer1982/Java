@@ -23,7 +23,7 @@ margin:auto;
     }
 </style>
 <body>
-<form id="contactForm" action="Login.html" onSubmit="return validateForm()" method="post">
+<form name="Login" action="Login.html" onSubmit="return validateForm()" method="post">
     <fieldset>
 <p>HTML Login page</p>
         <label>Username:
@@ -39,16 +39,16 @@ margin:auto;
     </fieldset>
 </form>
 
-<script>
+<script language="javascript">
 function validateForm() {
-var un = document.querySelector('#username').value;
+  var un = document.querySelector('#username').value;
   var pw = document.querySelector('#password').value;
   var username = "jamer";
   var password = "password";
   if ((un == username) && (pw == password)) {
     alert('You are successfully logged in');
   } else {
-    alert("Login was unsuccessful, please check your username and password");
+    alert("Login unsuccessful, please check your username and password");
     return false;
   }
 }
